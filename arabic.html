@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<title></title>
+    <script src="Scripts/jquery-2.1.1.intellisense.js"></script>
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+
+    <script src="script15.js"></script>
+
+    <link href="style.css" rel="stylesheet" />
+</head>
+<meta charset="utf-8"/>
+<body>
+    <div id="pop_up_con">
+        <div id="pop_up">
+            <div id="pop_up_content">
+            	<label style="margin-left:500px; font-size:20px; color:blue;">النتيجه</label><span id="resultBox"><input id="resultText" type="text"></span><span id="btn">موافق</span><label id="labelResult" style="margin-left:10px; font-size:15px;"></label>
+            </div>
+        </div>
+        <div id="pop_up_bg"></div>
+    </div>
+
+                <div id="overLay" style="width:100%; height:100%; background-color:orange; opacity:0.5; position:fixed; margin:-48px 0 0 -8px; display:none;"></div>
+
+<div id="gameCon">
+<span id="inst_btn">التعليمات</span><br>
+<div id="userLabel">اضغط على اي مربع لكي تبدأ</div>
+
+<div id="main">
+	<div id="1" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="2" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="3" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="4" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="5" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="6" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="7" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="8" class="border" data-clicked="false"><div class="squares"></div></div>
+	<div id="9" class="border" data-clicked="false"><div class="squares"></div></div>
+	<span id="over">انتهت اللعبه</span>
+</div>
+
+<div id="newGameBTN">لعبه جديده</div>
+
+<label id="timerLabel">الوقت :</label><label id="timer">35</label>
+<span id="levels">
+    <label id="levelTitle">اختر مستوى</label>
+    <ul id="ulLevels">
+        <input type="radio" name="zyx" class="radios" value="fetus" id="fetusRadio"><span id="fetusID" style="cursor:pointer; padding:0 0px 0 10px;">المستوى الاول</span><br>
+        <input type="radio" name="zyx" class="radios" value="baby" id="babyRadio"><span id="babyID" style="cursor:pointer; padding:0 0px 0 10px;">المستوى الثاني</span><br>
+        <input type="radio" name="zyx" class="radios" value="youth" id="youthRadio"><span id="youthID" style="cursor:pointer; padding:0 0px 0 10px;">المستوى الثالث</span><br>
+        <input type="radio" name="zyx" class="radios" value="man" id="manRadio"><span id="manID" style="cursor:pointer; padding:0 0px 0 10px; ">المستوى الرابع</span><br>
+        <input type="radio" name="zyx" class="radios" value="wise" id="wiseRadio"><span id="wiseID" style="cursor:pointer; padding:0 0px 0 10px;">المستوى الخامس</span><br>
+    </ul>
+</span>
+
+<label id="operation">( + )</label>
+<span id="chooseOperation">
+    <label id="operationTitle">اختر عمليه حسابيه</label>
+    <ul><input type="radio" name="xyz" class="radioS" value="( + )" checked="checked" id="addRadio"><span id="addID" style="cursor:pointer; padding:0 0px 0 10px; ">جمع</span><br>
+    <span id="subCon"><input type="radio" name="xyz" class="radioS" value="( - )" id="subRadio"><span id="subID" style="cursor:pointer; padding:0 0px 0 10px; ">طرح</span></span><br>
+    <span id="multCon"><input type="radio" name="xyz" class="radioS" value="( * )" id="multRadio"><span id="multID" style="cursor:pointer; padding:0 0px 0 10px; ">ضرب</span></span><br>
+    <span id="divCon"><input type="radio" name="xyz" class="radioS" value="( / )" id="divRadio"><span id="divID" style="cursor:pointer; padding:0 0px 0 10px; ">قسمه</span></span><br>
+    <span id="mixCon"><input type="radio" name="xyz" class="radioS" value="MIX" id="mixAddSub"><span id="mixID" style="cursor:pointer; padding:0 0px 0 10px; ">فاجئني</span></span><br></ul>
+</span>
+
+<span id="correction"></span>
+
+<span id="lang"><a href="index.html" style="text-decoration:none;">English</a> / <a href="arabic.html" style="text-decoration:none;">اللغه العربيه</a></span>
+
+<div id="ageGroup">
+    <span id="ageGroupTitle">الفئه العمريه<span><svg id="polygonSpan"><polygon points="0,0 10,0 5,8"></polygon></svg></span></span>
+    <div class="ageGroupItems">6 او اقل</div>
+    <div class="ageGroupItems">من 6 الى 8</div>
+    <div class="ageGroupItems">من 8 الى 12</div>
+    <div class="ageGroupItems">من 12 الى 15</div>
+    <div class="ageGroupItems">من 15 الى 20</div>
+    <div class="ageGroupItems">20 او اكثر</div>
+</div>
+<label id="ageGroupLabel">6 او اقل</label>
+</div>
+
+<span id="startPoint"></span>
+
+<div id="inst_parent">
+<div id="instructions_con"></div><div id="instructions"><span id="title">التعليمات</span><div id="ins_content">
+    مرحبا بكم<br><br>
+    تنمي هذه اللعبه المهارات الحسابيه و الذاكره قصيره المدى و القدره على العمل تحت ضغط و الانتباه.<br>
+    <p style="text-decoration:underline; font-weight:800">كيفيه اللعب :</p>
+        هدف اللعبه ان تقوم بعمليه حسابيه على 5 ارقام. على سبيل المثال الجمع ( + ).<br>
+        ستظهر لك نقطه البدايه عندما تضغط على العمليه الحسابيه التي تريدها.<br>
+        عليك ان تضغط على المربع لكي يظهر لك رقم.<br>
+        لا يمكنك الظغط على نفس المربع مرتين والا تنتهي اللعبه.<br>
+        يظهر لك مكان الاجابه بعد ظهور الرقم الخامس.<br>
+        <p>استمتع باللعب...</p>
+    <span id="startGame">ابدأ اللعبه</span>    
+</div></div></div>
+
+</body>
+</html>

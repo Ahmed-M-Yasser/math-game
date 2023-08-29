@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+    <script src="Scripts/jquery-2.1.1.intellisense.js"></script>
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+
+    <script src="script15.js"></script>
+
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="pop_up_con">
+        <div id="pop_up">
+            <div id="pop_up_content">
+            	<label style="margin-left:500px; font-size:20px; color:blue;">Result</label><span id="resultBox"><input id="resultText" type="text"></span><span id="btn">Submit</span><label id="labelResult" style="margin-left:10px; font-size:15px;"></label>
+            </div>
+        </div>
+        <div id="pop_up_bg"></div>
+    </div>
+
+                <div id="overLay" style="width:100%; height:100%; opacity:0.5; position:fixed; margin:-48px 0 0 -8px; display:none;"></div>
+
+<div id="inst_parent">
+    <div id="instructions_con"></div>
+    <div id="instructions">
+        <span id="title">Instructions</span>
+        <div id="ins_content">
+            Hi Brain-Teasers :D<br><br>
+            This Game improves your Arithmetic skills, Short-term Memory, ability to work under preasure, and Attention.<br>
+            <p style="text-decoration:underline; font-weight:800">How to Play :</p>
+            The aim of the Game is to Make a calculation on 5 numbers. For example Add ( + ).<br>
+            Your start point will show up when you click on the desired Calculation.<br>
+            You have to click on the squares one at a time to get a number.<br>
+            You can't click on the same square twice, nor click on more than 5 squares, or it'll be "Game over".<br>
+            You submit your answer after the Fifth number shows up.<br>
+            <p>Enjoy Teasing your brain...</p>
+            <span id="startGame">Start Game</span>    
+        </div>
+    </div>
+</div>  
+
+<div id="gameCon">
+
+    <div id="mainTest">
+        <DIV id="leftDiv">
+            <div id="leftTop">
+                <div id="lang"><a href="index.html" style="text-decoration:none;">English</a> / <a href="arabic.html" style="text-decoration:none;">Arabic</a></div>
+            </div>
+            <div id="leftCenter">
+                <div style="position:absolute;"><label id="timerLabel">Timer :</label><label id="timer">35</label></div>
+            </div>
+            <div id="leftBottom">
+                <div id="levels">
+                    <label id="levelTitle">Choose Level</label>
+                    <ul id="ulLevels">
+                        <input type="radio" name="zyx" class="radios" value="fetus" id="fetusRadio"><span id="fetusID" style="cursor:pointer; padding:0 0px 0 10px;">Easy</span><br>
+                        <input type="radio" name="zyx" class="radios" value="baby" id="babyRadio"><span id="babyID" style="cursor:pointer; padding:0 0px 0 10px;">Kinda Easy</span><br>
+                        <input type="radio" name="zyx" class="radios" value="youth" id="youthRadio"><span id="youthID" style="cursor:pointer; padding:0 0px 0 10px;">Normal</span><br>
+                        <input type="radio" name="zyx" class="radios" value="man" id="manRadio"><span id="manID" style="cursor:pointer; padding:0 0px 0 10px; ">Kinda Hard</span><br>
+                        <input type="radio" name="zyx" class="radios" value="wise" id="wiseRadio"><span id="wiseID" style="cursor:pointer; padding:0 0px 0 10px;">Hard</span><br>
+                    </ul>
+                </div>
+            </div>
+        </DIV>
+
+        <DIV id="centerDiv">
+            <div id="centerTop">
+                <div id="inst_btn_con"><span id="inst_btn">Instructions</span></div>
+                <div id="user_label_con"><div id="userLabel">Click on any Square to START</div></div>
+            </div>
+
+            <div id="centerCenter">
+                <div id="main">
+                    <div id="1" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="2" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="3" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="4" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="5" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="6" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="7" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="8" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <div id="9" class="border" data-clicked="false"><div class="squares"></div></div>
+                    <span id="over">Game Over</span>
+                </div>
+            </div>
+
+            <div id="centerBottom">
+                <div id="newGameBTN">New game</div>
+            </div>
+        </DIV>
+
+        <DIV id="rightDiv">
+            <div id="rightTop">
+                <div style="position:absolute;">
+                    <div id="ageGroup">
+                        <span id="ageGroupTitle">Age Groups<span><svg id="polygonSpan"><polygon points="0,0 10,0 5,8" style="fill:azure;"></polygon></svg></span></span>
+                        <div class="ageGroupItems">6 or Less</div>
+                        <div class="ageGroupItems">From 7 to 9</div>
+                        <div class="ageGroupItems">From 10 to 12</div>
+                        <div class="ageGroupItems">From 13 to 15</div>
+                        <div class="ageGroupItems">From 16 to 20</div>
+                        <div class="ageGroupItems">20 or More</div>
+                    </div>
+                </div>
+                    <label id="ageGroupLabel">6 or Less</label>
+            </div>
+
+            <div id="rightCenter">
+                <div style="position:absolute;"><label id="operation">( + )</label></div>
+            </div>
+
+            <div id="rightBottom">
+                <div id="chooseOperation">
+                    <label id="operationTitle">Choose a Calculation</label>
+                    <ul id="ulOperation">
+                        <input type="radio" name="xyz" class="radioS" value="( + )" checked="checked" id="addRadio"><span id="addID" style="cursor:pointer; padding:0 0px 0 10px; " title="Example: Start point + 1st number + 2nd number...">Addition</span><br>
+                        <span id="subCon"><input type="radio" name="xyz" class="radioS" value="( - )" id="subRadio"><span id="subID" style="cursor:pointer; padding:0 0px 0 10px; " title="Example: Start point - 1st number - 2nd number...">Subtraction</span></span><br>
+                        <span id="multCon"><input type="radio" name="xyz" class="radioS" value="( * )" id="multRadio"><span id="multID" style="cursor:pointer; padding:0 0px 0 10px; " title="Example: Start point * 1st number * 2nd number...">Multiplication</span></span><br>
+                        <span id="divCon"><input type="radio" name="xyz" class="radioS" value="( / )" id="divRadio"><span id="divID" style="cursor:pointer; padding:0 0px 0 10px; " title="Example: Start point / 1st number / 2nd number...">Division</span></span><br>
+                        <span id="mixCon"><input type="radio" name="xyz" class="radioS" value="MIX" id="mixAddSub"><span id="mixID" style="cursor:pointer; padding:0 0px 0 10px; " title="Example: Start point + 1st number - 2nd number...">MIX Mode</span></span><br>
+                    </ul>
+                </div>
+            </div>
+        </DIV>
+    </div>
+
+
+<span id="correction"></span>
+
+<span id="startPoint"></span>
+
+<audio id="radioSound">
+    <source src="audio/adriantnt_r_plastic.mp3" type="audio/mpeg"/>]
+</audio>
+<audio id="wrongSound">]
+    <source src="audio/button-10.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="listSound">]
+    <source src="audio/button-16.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="popSound">]
+    <source src="audio/63838^POP.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="correctSound">]
+    <source src="audio/applause-2.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="gameOverSound">]
+    <source src="audio/fail-buzzer-04.mp3" type="audio/mpeg"/>
+</audio>
+
+</body>
+</html>
