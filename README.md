@@ -1,2 +1,7 @@
-I made this project imediatelly after graduation from MCIT. It is my first fun/practice project & it's quite the challenge as a game.
-I finished this project at 23-07-2014
+* Choose an age group from the top right dropdown.
+* Choose a level from the left side
+* Choose an operation from the right side -if applicable-
+* The higher the age group, the more difficulty & operation options that you get.
+* If you are confident in your math skills, try the Hard Level & choose Mix Mode.
+
+*Finished on 23-07-2014*
